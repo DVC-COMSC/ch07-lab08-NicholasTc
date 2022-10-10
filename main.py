@@ -1,10 +1,7 @@
 # ******************************
 # Make your Code
 # ******************************
-numbers = []
-
-for i in range(5):
-    numbers.append(int(input()))
+numbers = list(map(int, input().split()))
 
 userInput = int(input())
 prev_num = numbers[0]
