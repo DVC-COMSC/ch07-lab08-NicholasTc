@@ -17,4 +17,5 @@ for y in range(5):
 
     prev_num = numbers[y]
 
-print(numbers)
+for n in numbers:
+    print(n, end=" ")
