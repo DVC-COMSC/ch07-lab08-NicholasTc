@@ -1,19 +1,19 @@
-# check if there is more than 1 values
-try:
-    numbers = [5,20,30,30,50]
-    num = int(input("Enter number from list to be removed: "))
+numbers = list(map(int, input().split()))
 
-    if numbers.count(num) > 1:
-        # removing all the duplicate element first
-        numbers = list(set(numbers))
-        
-        for n in numbers:
-            if n == num:
-                numbers.remove(n)
-            print(n)
-    else:
-        numbers.remove(num)
-except ValueError:
-    numbers.clear()
+userInput = int(input())
+prev_num = numbers[0]
 
-print(numbers)
+# numbers.insert(2, 20)
+for y in range(5):
+    if userInput > prev_num and userInput < numbers[y]:
+        numbers.insert(y, userInput)
+    elif userInput > max(numbers):
+        numbers.append(userInput)
+    elif userInput < numbers[0]:
+        numbers.insert(0, userInput)
+
+
+    prev_num = numbers[y]
+
+for n in numbers:
+    print(n, end=" ")
